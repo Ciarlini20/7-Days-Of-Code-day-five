@@ -21,7 +21,7 @@ if (message.toLowerCase() === 'sim') {
     let category = prompt(
       'A qual dessas categorias esse produto pertence? vegetais; laticinios, doces, proteinas, carboidratos'
     )
-    if (
+    while (
       category.toLowerCase() != 'vegetais' &&
       category.toLowerCase() != 'laticinios' &&
       category.toLowerCase() != 'doces' &&
