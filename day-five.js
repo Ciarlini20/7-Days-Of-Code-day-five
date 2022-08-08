@@ -14,7 +14,7 @@ while (message.toLowerCase() !== 'sim' && message.toLowerCase() !== 'nao') {
 if (message.toLowerCase() === 'sim') {
   while (message.toLowerCase() === 'sim') {
     let product = prompt('Qual o alimento?')
-    if (product == '') {
+    while (product == '') {
       alert(`Insira um alimento`)
       product = prompt('Qual o alimento?')
     }
