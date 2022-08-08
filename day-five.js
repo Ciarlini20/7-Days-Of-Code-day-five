@@ -7,13 +7,17 @@ let doces = []
 let proteinas = []
 let carboidratos = []
 
-while (message.toLowerCase() != 'sim' && message.toLowerCase() != 'nao') {
+while (message.toLowerCase() !== 'sim' && message.toLowerCase() !== 'nao') {
   alert('Responda com sim ou nao')
   message = prompt('Deseja adicionar algo a sua lista de compras?')
 }
-if (message === 'sim') {
-  while (message.toLowerCase() == 'sim') {
+if (message.toLowerCase() === 'sim') {
+  while (message.toLowerCase() === 'sim') {
     let product = prompt('Qual o alimento?')
+    if (product == '') {
+      alert(`Insira um alimento`)
+      product = prompt('Qual o alimento?')
+    }
     let category = prompt(
       'A qual dessas categorias esse produto pertence? vegetais; laticinios, doces, proteinas, carboidratos'
     )
@@ -30,19 +34,19 @@ if (message === 'sim') {
       )
     }
     if (category.toLowerCase() == 'vegetais') {
-      vegetais.push(product)
+      vegetais.push(product.toLowerCase())
     }
     if (category.toLowerCase() == 'laticinios') {
-      laticinios.push(product)
+      laticinios.push(product.toLowerCase())
     }
     if (category.toLowerCase() == 'doces') {
-      doces.push(product)
+      doces.push(product.toLowerCase())
     }
     if (category.toLowerCase() == 'proteinas') {
-      proteinas.push(product)
+      proteinas.push(product.toLowerCase())
     }
     if (category.toLowerCase() == 'carboidratos') {
-      carboidratos.push(product)
+      carboidratos.push(product.toLowerCase())
     }
 
     message = prompt('Deseja adicionar algo mais? responda com sim ou nao')
